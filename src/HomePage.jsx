@@ -7,7 +7,7 @@ function HomePage() {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    const delays = [1200, 800, 1600, 900, 900, 1000];
+    const delays = [1200, 800, 1600, 900, 900, 1200];
     const timer = setTimeout(() => {
       if (step < delays.length) setStep(step + 1);
     }, delays[step] || 0);
@@ -17,7 +17,7 @@ function HomePage() {
   const showUserMessage = step >= 1;
   const showTyping = step === 2;
   const showFirstReply = step >= 3;
-  const showButton = step >= 5;
+  const showButton = step >= 6;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 px-4 py-12">
